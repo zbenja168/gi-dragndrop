@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Management Options - GIStudy Drag &amp; Drop</title>
+<title>Complications of Chronic Pancreatitis - GIStudy Drag &amp; Drop</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg,#0a0f1c 0%,#0f1729 50%,#0a0f1c 100%); color:#e4e4e4; padding:20px; min-height:100vh; }
@@ -67,11 +67,11 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </head>
 <body>
 <a href="gi_index.html" class="nav-link" style="position:fixed;top:12px;left:12px;z-index:9999;background:rgba(0,0,0,.55);color:#94a3b8;border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:5px 13px;font-size:.72rem;text-decoration:none;">&#8592; Index</a>
-
+<a href="gi_111_driver_mutations.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
 <div class="container">
-<h1>💊 Management Options</h1>
-<p class="subtitle">Match each treatment modality to its goal, tools, and note</p>
-<p class="brick-tag">Brick 31: Pancreatic Carcinoma &nbsp;&middot;&nbsp; Game 111 of 111</p>
+<h1>🩺 Complications of Chronic Pancreatitis</h1>
+<p class="subtitle">Match each complication to its cause and how it manifests</p>
+<p class="brick-tag">Brick 31: Acute and Chronic Pancreatitis &nbsp;&middot;&nbsp; Game 110 of 114</p>
 <div class="stats-controls">
 <div class="stats">
 <div class="stat-item"><span class="stat-label">Score:</span><span id="score">0</span>/<span id="total">0</span></div>
@@ -100,10 +100,10 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </div>
 </div>
 <script>
-const categories = [{"key": "goal", "label": "Goal"}, {"key": "tools", "label": "Tools / Examples"}, {"key": "note", "label": "Note"}];
+const categories = [{"key": "cause", "label": "Underlying Cause"}, {"key": "manifestation", "label": "Manifestation"}];
 const categoryKeys = categories.map(c => c.key);
 const categoryLabels = {}; categories.forEach(c => categoryLabels[c.key] = c.label);
-const gameData = {"Surgery": {"goal": "Complete eradication of the tumor", "tools": "Resection reserved for when the whole tumor is removable", "note": "Palliative resection is not recommended"}, "Chemotherapy": {"goal": "Systemically kill cancer cells", "tools": "5-fluorouracil and paclitaxel", "note": "Only indicated when benefit outweighs harm"}, "Radiation": {"goal": "Shrink the tumor", "tools": "Often combined with chemotherapy", "note": "May enhance the effects of chemotherapy"}, "Palliative care": {"goal": "Relieve pain and symptoms without curing", "tools": "Stents, radiation, and nerve blocks", "note": "Used because the prognosis is typically poor"}};
+const gameData = {"Exocrine insufficiency": {"cause": "Fibrosis reduces enzyme production; lipase deficiency", "manifestation": "Steatorrhea, weight loss, low fat-soluble vitamins (A, D, E, K)"}, "Endocrine insufficiency": {"cause": "Destruction of insulin beta cells and glucagon alpha cells", "manifestation": "Type 3c (pancreatogenic) diabetes mellitus"}, "Biliary strictures": {"cause": "Fibrosis around the intrapancreatic common bile duct", "manifestation": "Obstructive jaundice"}, "Pancreatic cancer": {"cause": "Chronic inflammation raises lifetime risk", "manifestation": "Pancreatic adenocarcinoma"}, "Malnutrition": {"cause": "Malabsorption, reduced oral intake, and alcohol use", "manifestation": "Common and multifactorial nutrient and weight loss"}};
 
 let score = 0, totalItems = 0, draggedElement = null, allItems = {};
 

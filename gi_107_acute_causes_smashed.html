@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Complications of Acute Pancreatitis - GIStudy Drag &amp; Drop</title>
+<title>Causes of Acute Pancreatitis (I GET SMASHED) - GIStudy Drag &amp; Drop</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg,#0a0f1c 0%,#0f1729 50%,#0a0f1c 100%); color:#e4e4e4; padding:20px; min-height:100vh; }
@@ -67,11 +67,11 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </head>
 <body>
 <a href="gi_index.html" class="nav-link" style="position:fixed;top:12px;left:12px;z-index:9999;background:rgba(0,0,0,.55);color:#94a3b8;border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:5px 13px;font-size:.72rem;text-decoration:none;">&#8592; Index</a>
-<a href="gi_106_chronic_causes_tigaro.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
+<a href="gi_108_acute_complications.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
 <div class="container">
-<h1>⚠️ Complications of Acute Pancreatitis</h1>
-<p class="subtitle">Match each complication to its feature, timing, and management</p>
-<p class="brick-tag">Brick 30: Acute and Chronic Pancreatitis &nbsp;&middot;&nbsp; Game 105 of 111</p>
+<h1>💥 Causes of Acute Pancreatitis (I GET SMASHED)</h1>
+<p class="subtitle">Match each acute pancreatitis cause to its mnemonic clue and mechanism</p>
+<p class="brick-tag">Brick 31: Acute and Chronic Pancreatitis &nbsp;&middot;&nbsp; Game 107 of 114</p>
 <div class="stats-controls">
 <div class="stats">
 <div class="stat-item"><span class="stat-label">Score:</span><span id="score">0</span>/<span id="total">0</span></div>
@@ -100,10 +100,10 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </div>
 </div>
 <script>
-const categories = [{"key": "feature", "label": "Key Feature"}, {"key": "timing", "label": "Timing / Outcome"}, {"key": "management", "label": "Management"}];
+const categories = [{"key": "mnemonic", "label": "Mnemonic Clue (I GET SMASHED)"}, {"key": "mechanism", "label": "Mechanism"}];
 const categoryKeys = categories.map(c => c.key);
 const categoryLabels = {}; categories.forEach(c => categoryLabels[c.key] = c.label);
-const gameData = {"Peripancreatic fluid collections": {"feature": "Fluid from edema and leaking pancreatic juice", "timing": "Early collection", "management": "Most resolve spontaneously"}, "Pancreatic pseudocyst": {"feature": "Amylase-rich fluid walled off by fibrous, non-epithelial wall", "timing": "Walls off over ~4 weeks", "management": "Drainage if large, symptomatic, or infected"}, "Infected necrosis": {"feature": "Gut bacteria translocate into non-enhancing devitalized tissue", "timing": "Mortality spike at 2–3 weeks", "management": "Broad-spectrum antibiotics plus debridement/necrosectomy"}, "SIRS and MODS": {"feature": "Cytokines (TNF-α, IL-1, IL-6) and DAMPs injure distant organs", "timing": "Early mortality peak at 1–2 weeks", "management": "ICU support for hypoxia and organ failure"}, "Hypovolemia": {"feature": "Third spacing from increased vascular permeability", "timing": "Losses of 2–4 L over first 48 hours", "management": "Fluid resuscitation with Lactated Ringer's"}};
+const gameData = {"Gallstones": {"mnemonic": "G — most common cause, 40–70% of cases", "mechanism": "Impact at ampulla of Vater, raising intraductal pressure"}, "Ethanol": {"mnemonic": "E — 25–35% of cases", "mechanism": "Directly toxic to acinar cells"}, "Metabolic": {"mnemonic": "M — hypertriglyceridemia >1,000 mg/dL or hypercalcemia", "mechanism": "Free fatty acids toxic to acinar cells and endothelium"}, "Scorpion stings": {"mnemonic": "S — Trinidad scorpion venom", "mechanism": "ACh release drives enzyme hypersecretion and Oddi contraction"}, "ERCP": {"mnemonic": "E — endoscopic procedure at the ampulla of Vater", "mechanism": "Microedema and transient pancreatic duct obstruction"}, "Drugs": {"mnemonic": "D — azathioprine, valproic acid, 6-MP, thiazides", "mechanism": "Thiazides raise serum calcium and worsen hypertriglyceridemia"}};
 
 let score = 0, totalItems = 0, draggedElement = null, allItems = {};
 

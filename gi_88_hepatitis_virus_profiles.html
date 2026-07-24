@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chronic and Structural Biliary Diseases - GIStudy Drag &amp; Drop</title>
+<title>Hepatitis Viruses A–E at a Glance - GIStudy Drag &amp; Drop</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg,#0a0f1c 0%,#0f1729 50%,#0a0f1c 100%); color:#e4e4e4; padding:20px; min-height:100vh; }
@@ -67,11 +67,11 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </head>
 <body>
 <a href="gi_index.html" class="nav-link" style="position:fixed;top:12px;left:12px;z-index:9999;background:rgba(0,0,0,.55);color:#94a3b8;border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:5px 13px;font-size:.72rem;text-decoration:none;">&#8592; Index</a>
-<a href="gi_97_biliary_management.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
+<a href="gi_89_hepatitis_serology_markers.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
 <div class="container">
-<h1>🧬 Chronic and Structural Biliary Diseases</h1>
-<p class="subtitle">Match each disorder to its mechanism, key feature, and setting</p>
-<p class="brick-tag">Brick 27: Noninfectious Disorders of the Biliary System &nbsp;&middot;&nbsp; Game 96 of 111</p>
+<h1>🧬 Hepatitis Viruses A–E at a Glance</h1>
+<p class="subtitle">Match each hepatitis virus to its genome/family, route of transmission, and risk of chronic infection</p>
+<p class="brick-tag">Brick 25: Viral Hepatitis: Clinical Presentation, Diagnosis, and Autoimmune Comparison &nbsp;&middot;&nbsp; Game 88 of 114</p>
 <div class="stats-controls">
 <div class="stats">
 <div class="stat-item"><span class="stat-label">Score:</span><span id="score">0</span>/<span id="total">0</span></div>
@@ -100,10 +100,10 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </div>
 </div>
 <script>
-const categories = [{"key": "mechanism", "label": "Mechanism"}, {"key": "feature", "label": "Key Feature"}, {"key": "setting", "label": "Population / Setting"}];
+const categories = [{"key": "genome", "label": "Genome & Family"}, {"key": "route", "label": "Main Transmission"}, {"key": "chronic", "label": "Chronicity Risk"}];
 const categoryKeys = categories.map(c => c.key);
 const categoryLabels = {}; categories.forEach(c => categoryLabels[c.key] = c.label);
-const gameData = {"Primary biliary cholangitis (PBC)": {"mechanism": "Autoimmune destruction of small intrahepatic bile ducts", "feature": "Positive antimitochondrial antibodies (AMA)", "setting": "Middle-aged women with fatigue and pruritus"}, "Primary sclerosing cholangitis (PSC)": {"mechanism": "Chronic inflammation and fibrosis of intra- and extrahepatic ducts", "feature": "Beading on cholangiography; p-ANCA positive", "setting": "Men around age 40 with inflammatory bowel disease"}, "Secondary biliary cirrhosis": {"mechanism": "Prolonged extrahepatic obstruction leading to cirrhosis", "feature": "Caused by recurrent gallstones, strictures, or malignancy", "setting": "Persistent cholestasis causing hepatocyte injury and fibrosis"}, "Biliary atresia": {"mechanism": "Progressive fibro-obliteration of extrahepatic bile ducts", "feature": "Neonatal cholestasis with jaundice and pale stools", "setting": "Pediatric disorder needing surgery, often liver transplant"}, "TPN-associated cholestasis": {"mechanism": "Iatrogenic intrahepatic cholestasis from reduced enteral stimulation", "feature": "Altered bile composition causing bile stasis", "setting": "Critically ill patients or neonates on parenteral nutrition"}, "Mirizzi syndrome": {"mechanism": "Cystic duct stone compresses the common hepatic duct", "feature": "Obstructive jaundice without a stone in the common bile duct", "setting": "Complication of gallstones lodged in the cystic duct"}, "Gallstone ileus": {"mechanism": "Large gallstone erodes into intestine via a biliary-enteric fistula", "feature": "Mechanical bowel obstruction with pneumobilia on imaging", "setting": "Complication of chronic cholelithiasis and cholecystitis"}};
+const gameData = {"Hepatitis A virus (HAV)": {"genome": "Nonenveloped, positive-sense ssRNA (Picornavirus)", "route": "Fecal–oral (contaminated food/water)", "chronic": "None — acute, self-limited only"}, "Hepatitis B virus (HBV)": {"genome": "Enveloped, partially dsDNA (Hepadnavirus); reverse-transcribes", "route": "Parenteral, sexual, and perinatal", "chronic": "~5–10% of adults, up to ~90% of infants"}, "Hepatitis C virus (HCV)": {"genome": "Enveloped, positive-sense ssRNA (Flavivirus)", "route": "Parenteral (blood); rarely sexual", "chronic": "High — up to ~85% become chronic"}, "Hepatitis D virus (HDV)": {"genome": "Defective, circular ssRNA (Deltavirus); needs HBV", "route": "Parenteral, sexual, perinatal (with HBV)", "chronic": "Increased with HBV; worse in superinfection"}, "Hepatitis E virus (HEV)": {"genome": "Nonenveloped RNA (Hepevirus)", "route": "Fecal–oral (contaminated water)", "chronic": "Rare; mainly in immunocompromised"}};
 
 let score = 0, totalItems = 0, draggedElement = null, allItems = {};
 

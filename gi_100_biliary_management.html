@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Diagnostic &amp; Pathology Clues - GIStudy Drag &amp; Drop</title>
+<title>Management of Biliary Conditions - GIStudy Drag &amp; Drop</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg,#0a0f1c 0%,#0f1729 50%,#0a0f1c 100%); color:#e4e4e4; padding:20px; min-height:100vh; }
@@ -67,11 +67,11 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </head>
 <body>
 <a href="gi_index.html" class="nav-link" style="position:fixed;top:12px;left:12px;z-index:9999;background:rgba(0,0,0,.55);color:#94a3b8;border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:5px 13px;font-size:.72rem;text-decoration:none;">&#8592; Index</a>
-<a href="gi_111_management_options.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
+<a href="gi_101_benign_liver_lesions.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
 <div class="container">
-<h1>🔬 Diagnostic &amp; Pathology Clues</h1>
-<p class="subtitle">Match each clue to its description and clinical role</p>
-<p class="brick-tag">Brick 31: Pancreatic Carcinoma &nbsp;&middot;&nbsp; Game 110 of 111</p>
+<h1>💊 Management of Biliary Conditions</h1>
+<p class="subtitle">Match each condition to its treatment, rationale, and note</p>
+<p class="brick-tag">Brick 28: Noninfectious Disorders of the Biliary System &nbsp;&middot;&nbsp; Game 100 of 114</p>
 <div class="stats-controls">
 <div class="stats">
 <div class="stat-item"><span class="stat-label">Score:</span><span id="score">0</span>/<span id="total">0</span></div>
@@ -100,10 +100,10 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </div>
 </div>
 <script>
-const categories = [{"key": "description", "label": "Description"}, {"key": "role", "label": "Clinical Role"}];
+const categories = [{"key": "treatment", "label": "Treatment"}, {"key": "rationale", "label": "Rationale"}, {"key": "note", "label": "Note"}];
 const categoryKeys = categories.map(c => c.key);
 const categoryLabels = {}; categories.forEach(c => categoryLabels[c.key] = c.label);
-const gameData = {"CA 19-9": {"description": "Blood tumor marker for pancreatic carcinoma", "role": "Used mainly for prognosis, where lower level means better outlook"}, "Biopsy": {"description": "Sampling for characteristic histologic findings", "role": "Needed to confirm the diagnosis"}, "Double-duct sign": {"description": "Dilation of the common bile duct and pancreatic duct", "role": "An imaging finding on contrast-enhanced CT"}, "Desmoplasia": {"description": "Dense collagen secreted by proliferating fibroblasts", "role": "Malignant glands arranged haphazardly within this stroma"}, "Conjugated hyperbilirubinemia": {"description": "Elevated conjugated bilirubin", "role": "Reflects the obstructive pattern of the jaundice"}};
+const gameData = {"Symptomatic cholelithiasis": {"treatment": "Laparoscopic cholecystectomy", "rationale": "Definitive and curative keyhole surgery", "note": "Less invasive with a shorter recovery time"}, "Choledocholithiasis": {"treatment": "ERCP followed by cholecystectomy", "rationale": "ERCP removes the accessible common bile duct stone", "note": "Cholecystectomy follows to prevent recurrence"}, "Ascending cholangitis": {"treatment": "Broad-spectrum antibiotics plus ERCP decompression", "rationale": "Emergent decompression of the common bile duct", "note": "Antibiotics warranted for the infection"}, "Gallstone pancreatitis": {"treatment": "Supportive care", "rationale": "Antibiotics are not part of initial treatment", "note": "Most common cause of pancreatitis"}, "Mild biliary disease": {"treatment": "Low-fat diet plus ursodeoxycholic acid", "rationale": "Ursodeoxycholic acid dissolves cholesterol stones", "note": "Diet decreases occurrence of biliary colic"}};
 
 let score = 0, totalItems = 0, draggedElement = null, allItems = {};
 

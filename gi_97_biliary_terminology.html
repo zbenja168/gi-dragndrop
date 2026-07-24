@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clinical Presentation of Gallstone Syndromes - GIStudy Drag &amp; Drop</title>
+<title>Biliary Terminology - GIStudy Drag &amp; Drop</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg,#0a0f1c 0%,#0f1729 50%,#0a0f1c 100%); color:#e4e4e4; padding:20px; min-height:100vh; }
@@ -67,11 +67,11 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </head>
 <body>
 <a href="gi_index.html" class="nav-link" style="position:fixed;top:12px;left:12px;z-index:9999;background:rgba(0,0,0,.55);color:#94a3b8;border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:5px 13px;font-size:.72rem;text-decoration:none;">&#8592; Index</a>
-<a href="gi_96_chronic_structural_biliary.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
+<a href="gi_98_gallstone_presentation.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
 <div class="container">
-<h1>🩺 Clinical Presentation of Gallstone Syndromes</h1>
-<p class="subtitle">Match each syndrome to its pain, fever, jaundice, and labs</p>
-<p class="brick-tag">Brick 27: Noninfectious Disorders of the Biliary System &nbsp;&middot;&nbsp; Game 95 of 111</p>
+<h1>🪨 Biliary Terminology</h1>
+<p class="subtitle">Match each biliary term to its meaning, cause, and hallmark</p>
+<p class="brick-tag">Brick 28: Noninfectious Disorders of the Biliary System &nbsp;&middot;&nbsp; Game 97 of 114</p>
 <div class="stats-controls">
 <div class="stats">
 <div class="stat-item"><span class="stat-label">Score:</span><span id="score">0</span>/<span id="total">0</span></div>
@@ -100,10 +100,10 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </div>
 </div>
 <script>
-const categories = [{"key": "pain", "label": "Pain"}, {"key": "fever", "label": "Fever"}, {"key": "jaundice", "label": "Jaundice"}, {"key": "labs", "label": "Lab Results"}];
+const categories = [{"key": "meaning", "label": "Meaning"}, {"key": "cause", "label": "Cause / Mechanism"}, {"key": "hallmark", "label": "Hallmark Feature"}];
 const categoryKeys = categories.map(c => c.key);
 const categoryLabels = {}; categories.forEach(c => categoryLabels[c.key] = c.label);
-const gameData = {"Biliary colic": {"pain": "RUQ pain, intermittent, lasts under 6 hours", "fever": "Afebrile", "jaundice": "No jaundice", "labs": "Normal labs"}, "Acute cholecystitis": {"pain": "RUQ pain lasting more than 6 hours", "fever": "Febrile", "jaundice": "Jaundice absent", "labs": "High WBC, LFTs normal"}, "Ascending cholangitis": {"pain": "Severe RUQ pain (Charcot triad)", "fever": "Fever, may be septic", "jaundice": "Jaundice present", "labs": "High WBC, cholestatic LFTs (ALP, direct bilirubin, GGT)"}, "Choledocholithiasis": {"pain": "Severe RUQ pain from duct obstruction", "fever": "Fever with common bile duct stone", "jaundice": "Jaundice from CBD obstruction", "labs": "Increased ALP, dilated CBD on ultrasound"}};
+const gameData = {"Cholelithiasis": {"meaning": "Gallstones in the gallbladder", "cause": "Bile supersaturated with cholesterol or bilirubin", "hallmark": "Often asymptomatic; may cause biliary colic"}, "Cholecystitis": {"meaning": "Inflammation of the gallbladder", "cause": "Usually cystic duct obstruction by a stone", "hallmark": "Positive Murphy sign"}, "Choledocholithiasis": {"meaning": "Gallstones stuck in the common bile duct", "cause": "Stone migrates into the common bile duct", "hallmark": "Jaundice with dilated common bile duct"}, "Ascending cholangitis": {"meaning": "Life-threatening infection of the biliary tree", "cause": "Bacteria ascend an obstructed, stagnant duct", "hallmark": "Charcot triad: jaundice, fever, RUQ pain"}, "Cholestasis": {"meaning": "Reduced or blocked bile flow from the liver", "cause": "Intrahepatic or extrahepatic obstruction", "hallmark": "Jaundice, pruritus, dark urine, pale stools"}};
 
 let score = 0, totalItems = 0, draggedElement = null, allItems = {};
 

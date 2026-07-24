@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Drugs for Hepatic Parasitic Infections - GIStudy Drag &amp; Drop</title>
+<title>Complications of Acute Pancreatitis - GIStudy Drag &amp; Drop</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg,#0a0f1c 0%,#0f1729 50%,#0a0f1c 100%); color:#e4e4e4; padding:20px; min-height:100vh; }
@@ -67,11 +67,11 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </head>
 <body>
 <a href="gi_index.html" class="nav-link" style="position:fixed;top:12px;left:12px;z-index:9999;background:rgba(0,0,0,.55);color:#94a3b8;border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:5px 13px;font-size:.72rem;text-decoration:none;">&#8592; Index</a>
-<a href="gi_91_hcv_daa_classes.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
+<a href="gi_109_chronic_causes_tigaro.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
 <div class="container">
-<h1>💊 Drugs for Hepatic Parasitic Infections</h1>
-<p class="subtitle">Match each drug to its indication and mechanism</p>
-<p class="brick-tag">Brick 25: Infectious Hepatic Abscesses and Flukes &nbsp;&middot;&nbsp; Game 90 of 111</p>
+<h1>⚠️ Complications of Acute Pancreatitis</h1>
+<p class="subtitle">Match each complication to its feature, timing, and management</p>
+<p class="brick-tag">Brick 31: Acute and Chronic Pancreatitis &nbsp;&middot;&nbsp; Game 108 of 114</p>
 <div class="stats-controls">
 <div class="stats">
 <div class="stat-item"><span class="stat-label">Score:</span><span id="score">0</span>/<span id="total">0</span></div>
@@ -100,10 +100,10 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </div>
 </div>
 <script>
-const categories = [{"key": "indication", "label": "Indication"}, {"key": "mechanism", "label": "Mechanism / Note"}];
+const categories = [{"key": "feature", "label": "Key Feature"}, {"key": "timing", "label": "Timing / Outcome"}, {"key": "management", "label": "Management"}];
 const categoryKeys = categories.map(c => c.key);
 const categoryLabels = {}; categories.forEach(c => categoryLabels[c.key] = c.label);
-const gameData = {"Metronidazole": {"indication": "Tissue amebicide for amebic abscess (used first)", "mechanism": "Generates toxic free radicals damaging parasite DNA"}, "Paromomycin": {"indication": "Luminal amebicide given after metronidazole", "mechanism": "Clears residual intestinal cysts, preventing relapse"}, "Triclabendazole": {"indication": "Treatment of fascioliasis (Fasciola hepatica)", "mechanism": "Inhibits tubulin; may cause biliary obstruction, long QTc"}, "Praziquantel": {"indication": "Preferred for clonorchiasis or opisthorchiasis", "mechanism": "Rapid Ca2+ influx causing parasite immobilization"}};
+const gameData = {"Peripancreatic fluid collections": {"feature": "Fluid from edema and leaking pancreatic juice", "timing": "Early collection", "management": "Most resolve spontaneously"}, "Pancreatic pseudocyst": {"feature": "Amylase-rich fluid walled off by fibrous, non-epithelial wall", "timing": "Walls off over ~4 weeks", "management": "Drainage if large, symptomatic, or infected"}, "Infected necrosis": {"feature": "Gut bacteria translocate into non-enhancing devitalized tissue", "timing": "Mortality spike at 2–3 weeks", "management": "Broad-spectrum antibiotics plus debridement/necrosectomy"}, "SIRS and MODS": {"feature": "Cytokines (TNF-α, IL-1, IL-6) and DAMPs injure distant organs", "timing": "Early mortality peak at 1–2 weeks", "management": "ICU support for hypoxia and organ failure"}, "Hypovolemia": {"feature": "Third spacing from increased vascular permeability", "timing": "Losses of 2–4 L over first 48 hours", "management": "Fluid resuscitation with Lactated Ringer's"}};
 
 let score = 0, totalItems = 0, draggedElement = null, allItems = {};
 

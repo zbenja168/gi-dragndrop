@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Benign Liver Lesions - GIStudy Drag &amp; Drop</title>
+<title>Diagnostic Workup - GIStudy Drag &amp; Drop</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg,#0a0f1c 0%,#0f1729 50%,#0a0f1c 100%); color:#e4e4e4; padding:20px; min-height:100vh; }
@@ -67,11 +67,11 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </head>
 <body>
 <a href="gi_index.html" class="nav-link" style="position:fixed;top:12px;left:12px;z-index:9999;background:rgba(0,0,0,.55);color:#94a3b8;border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:5px 13px;font-size:.72rem;text-decoration:none;">&#8592; Index</a>
-<a href="gi_99_malignant_liver_tumors.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
+<a href="gi_107_acute_causes_smashed.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
 <div class="container">
-<h1>🫀 Benign Liver Lesions</h1>
-<p class="subtitle">Match each benign hepatic lesion to its profile</p>
-<p class="brick-tag">Brick 28: Hepatic and Biliary Neoplasms &nbsp;&middot;&nbsp; Game 98 of 111</p>
+<h1>🔬 Diagnostic Workup</h1>
+<p class="subtitle">Match each test to its role and its key finding in peritonitis</p>
+<p class="brick-tag">Brick 30: Peritonitis &nbsp;&middot;&nbsp; Game 106 of 114</p>
 <div class="stats-controls">
 <div class="stats">
 <div class="stat-item"><span class="stat-label">Score:</span><span id="score">0</span>/<span id="total">0</span></div>
@@ -100,10 +100,10 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </div>
 </div>
 <script>
-const categories = [{"key": "demographics", "label": "Demographics"}, {"key": "association", "label": "Key Association"}, {"key": "complication", "label": "Complication Risk"}, {"key": "pathology", "label": "Distinguishing Pathology"}];
+const categories = [{"key": "role", "label": "Role"}, {"key": "finding", "label": "Key Finding"}];
 const categoryKeys = categories.map(c => c.key);
 const categoryLabels = {}; categories.forEach(c => categoryLabels[c.key] = c.label);
-const gameData = {"Hepatic hemangioma": {"demographics": "Most common benign liver tumor, ages 30-50", "association": "Congenital vascular malformation, not a true neoplasm", "complication": "Rupture and hemorrhage are rare, not a major concern", "pathology": "Dilated blood-filled channels lined by endothelial cells"}, "Focal nodular hyperplasia": {"demographics": "Second most common benign mass, mostly young-to-middle-aged females", "association": "Localized vascular abnormality, not strongly hormone-dependent", "complication": "No meaningful risk of hemorrhage or malignant transformation", "pathology": "Hyperplastic hepatocytes around central fibrous scar, contains normal bile ducts"}, "Hepatic adenoma": {"demographics": "Uncommon, young women 20-44 years", "association": "Oral contraceptives, anabolic androgens, glycogen storage disease type 1a", "complication": "Spontaneous hemorrhage and malignant transformation to HCC", "pathology": "Benign epithelial tumor driven by estrogen receptors in hepatocytes"}};
+const gameData = {"Upright chest X-ray": {"role": "Detects free intraperitoneal air under the diaphragm", "finding": "About 85% sensitive for a perforated duodenal ulcer"}, "CT abdomen": {"role": "Most useful imaging in acute abdominal pain", "finding": "Shows free air, fluid collections, bowel wall thickening, abscesses"}, "Diagnostic paracentesis": {"role": "Samples ascitic fluid in suspected SBP", "finding": "PMN count of 250 cells/mm3 or more is diagnostic"}, "Complete blood count": {"role": "Reflects acute inflammatory or infectious response", "finding": "Leukocytosis with left shift and increased band forms"}, "Amylase and lipase": {"role": "Directed at identifying pancreatitis as a cause", "finding": "Elevated when pancreatitis underlies the peritonitis"}, "Liver function tests": {"role": "Directed at identifying biliary disease as a cause", "finding": "Abnormal values point to a biliary source"}};
 
 let score = 0, totalItems = 0, draggedElement = null, allItems = {};
 

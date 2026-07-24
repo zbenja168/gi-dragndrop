@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clinical Signs &amp; Presentation - GIStudy Drag &amp; Drop</title>
+<title>Stepwise Driver Mutations - GIStudy Drag &amp; Drop</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg,#0a0f1c 0%,#0f1729 50%,#0a0f1c 100%); color:#e4e4e4; padding:20px; min-height:100vh; }
@@ -67,11 +67,11 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </head>
 <body>
 <a href="gi_index.html" class="nav-link" style="position:fixed;top:12px;left:12px;z-index:9999;background:rgba(0,0,0,.55);color:#94a3b8;border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:5px 13px;font-size:.72rem;text-decoration:none;">&#8592; Index</a>
-<a href="gi_110_diagnosis_pathology.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
+<a href="gi_112_clinical_signs.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
 <div class="container">
-<h1>🩺 Clinical Signs &amp; Presentation</h1>
-<p class="subtitle">Match each finding to its manifestation and key detail</p>
-<p class="brick-tag">Brick 31: Pancreatic Carcinoma &nbsp;&middot;&nbsp; Game 109 of 111</p>
+<h1>🧬 Stepwise Driver Mutations</h1>
+<p class="subtitle">Match each driver gene to its chromosome, frequency, and normal role</p>
+<p class="brick-tag">Brick 32: Pancreatic Carcinoma &nbsp;&middot;&nbsp; Game 111 of 114</p>
 <div class="stats-controls">
 <div class="stats">
 <div class="stat-item"><span class="stat-label">Score:</span><span id="score">0</span>/<span id="total">0</span></div>
@@ -100,10 +100,10 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </div>
 </div>
 <script>
-const categories = [{"key": "manifestation", "label": "Manifestation"}, {"key": "detail", "label": "Key Detail"}];
+const categories = [{"key": "chromosome", "label": "Chromosome"}, {"key": "frequency", "label": "Frequency"}, {"key": "normal_role", "label": "Normal Role"}];
 const categoryKeys = categories.map(c => c.key);
 const categoryLabels = {}; categories.forEach(c => categoryLabels[c.key] = c.label);
-const gameData = {"Courvoisier sign": {"manifestation": "Palpably enlarged, nontender gallbladder", "detail": "Accompanied by mild painless jaundice"}, "Trousseau sign": {"manifestation": "Migratory thrombophlebitis", "detail": "From tumor procoagulants such as tissue factor and mucins"}, "Jaundice": {"manifestation": "Yellowish skin from common bile duct obstruction", "detail": "Painless in 50% of patients"}, "Epigastric pain": {"manifestation": "Insidious gnawing visceral pain", "detail": "Located in the epigastric region"}, "New-onset diabetes": {"manifestation": "Sudden onset of diabetes mellitus", "detail": "One of the less common presenting signs"}};
+const gameData = {"KRAS": {"chromosome": "12p", "frequency": "Almost all cases", "normal_role": "GTPase relaying signals from outside the cell to the nucleus"}, "p16": {"chromosome": "9p", "frequency": "About 95% of cases", "normal_role": "Inhibits G1 to S transition by inhibiting CDK4/6"}, "p53": {"chromosome": "17p", "frequency": "50% to 75% of cases", "normal_role": "Halts the cell cycle when DNA damage is detected"}, "DPC4/SMAD4": {"chromosome": "18q", "frequency": "Approximately 55% of cases", "normal_role": "Inhibits TGF-reliant cellular development"}};
 
 let score = 0, totalItems = 0, draggedElement = null, allItems = {};
 

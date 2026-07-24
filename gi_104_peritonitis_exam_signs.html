@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Management of Biliary Conditions - GIStudy Drag &amp; Drop</title>
+<title>Signs &amp; Pain of Peritonitis - GIStudy Drag &amp; Drop</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg,#0a0f1c 0%,#0f1729 50%,#0a0f1c 100%); color:#e4e4e4; padding:20px; min-height:100vh; }
@@ -67,11 +67,11 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </head>
 <body>
 <a href="gi_index.html" class="nav-link" style="position:fixed;top:12px;left:12px;z-index:9999;background:rgba(0,0,0,.55);color:#94a3b8;border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:5px 13px;font-size:.72rem;text-decoration:none;">&#8592; Index</a>
-<a href="gi_98_benign_liver_lesions.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
+<a href="gi_105_peritonitis_organisms.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
 <div class="container">
-<h1>💊 Management of Biliary Conditions</h1>
-<p class="subtitle">Match each condition to its treatment, rationale, and note</p>
-<p class="brick-tag">Brick 27: Noninfectious Disorders of the Biliary System &nbsp;&middot;&nbsp; Game 97 of 111</p>
+<h1>🩺 Signs &amp; Pain of Peritonitis</h1>
+<p class="subtitle">Match each exam finding or pain type to its description, basis, and significance</p>
+<p class="brick-tag">Brick 30: Peritonitis &nbsp;&middot;&nbsp; Game 104 of 114</p>
 <div class="stats-controls">
 <div class="stats">
 <div class="stat-item"><span class="stat-label">Score:</span><span id="score">0</span>/<span id="total">0</span></div>
@@ -100,10 +100,10 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </div>
 </div>
 <script>
-const categories = [{"key": "treatment", "label": "Treatment"}, {"key": "rationale", "label": "Rationale"}, {"key": "note", "label": "Note"}];
+const categories = [{"key": "description", "label": "Description"}, {"key": "basis", "label": "Mechanism / Basis"}, {"key": "significance", "label": "Significance"}];
 const categoryKeys = categories.map(c => c.key);
 const categoryLabels = {}; categories.forEach(c => categoryLabels[c.key] = c.label);
-const gameData = {"Symptomatic cholelithiasis": {"treatment": "Laparoscopic cholecystectomy", "rationale": "Definitive and curative keyhole surgery", "note": "Less invasive with a shorter recovery time"}, "Choledocholithiasis": {"treatment": "ERCP followed by cholecystectomy", "rationale": "ERCP removes the accessible common bile duct stone", "note": "Cholecystectomy follows to prevent recurrence"}, "Ascending cholangitis": {"treatment": "Broad-spectrum antibiotics plus ERCP decompression", "rationale": "Emergent decompression of the common bile duct", "note": "Antibiotics warranted for the infection"}, "Gallstone pancreatitis": {"treatment": "Supportive care", "rationale": "Antibiotics are not part of initial treatment", "note": "Most common cause of pancreatitis"}, "Mild biliary disease": {"treatment": "Low-fat diet plus ursodeoxycholic acid", "rationale": "Ursodeoxycholic acid dissolves cholesterol stones", "note": "Diet decreases occurrence of biliary colic"}};
+const gameData = {"Visceral pain": {"description": "Dull, poorly localized, midline pain", "basis": "Slow, unmyelinated C fibers on hollow viscera walls", "significance": "Often accompanied by poor appetite, nausea, vomiting"}, "Somatic pain": {"description": "Sharp, well-localized, worsened by stretching peritoneum", "basis": "Fast, myelinated A-delta fibers of parietal peritoneum", "significance": "Physiologic basis for localized peritoneal signs"}, "Involuntary guarding (rigidity)": {"description": "Abdominal muscle rigidity that cannot be relaxed", "basis": "Spinal reflex arc from parietal peritoneal inflammation", "significance": "Most specific exam finding for peritonitis"}, "Voluntary guarding": {"description": "Conscious contraction of abdominal wall muscles", "basis": "Patient minimizing deep palpation to avoid worsened pain", "significance": "Can often be overcome by distraction"}, "Rebound tenderness": {"description": "Pain worse on sudden release than on compression", "basis": "Deep pressure held then released, stretching inflamed peritoneum", "significance": "Classically described but rarely elicited in practice"}, "Percussion tenderness": {"description": "Tenderness elicited by gentle tapping of the abdomen", "basis": "Sensitive maneuver that irritates inflamed peritoneum", "significance": "Helps determine the point of maximal tenderness"}};
 
 let score = 0, totalItems = 0, draggedElement = null, allItems = {};
 

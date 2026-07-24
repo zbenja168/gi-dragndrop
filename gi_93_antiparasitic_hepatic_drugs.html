@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Diagnosis &amp; Management - GIStudy Drag &amp; Drop</title>
+<title>Drugs for Hepatic Parasitic Infections - GIStudy Drag &amp; Drop</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg,#0a0f1c 0%,#0f1729 50%,#0a0f1c 100%); color:#e4e4e4; padding:20px; min-height:100vh; }
@@ -67,11 +67,11 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </head>
 <body>
 <a href="gi_index.html" class="nav-link" style="position:fixed;top:12px;left:12px;z-index:9999;background:rgba(0,0,0,.55);color:#94a3b8;border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:5px 13px;font-size:.72rem;text-decoration:none;">&#8592; Index</a>
-<a href="gi_101_peritonitis_exam_signs.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
+<a href="gi_94_hcv_daa_classes.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
 <div class="container">
-<h1>🩻 Diagnosis &amp; Management</h1>
-<p class="subtitle">Match each neoplasm to its diagnostic clue, presentation, and treatment</p>
-<p class="brick-tag">Brick 28: Hepatic and Biliary Neoplasms &nbsp;&middot;&nbsp; Game 100 of 111</p>
+<h1>💊 Drugs for Hepatic Parasitic Infections</h1>
+<p class="subtitle">Match each drug to its indication and mechanism</p>
+<p class="brick-tag">Brick 26: Infectious Hepatic Abscesses and Flukes &nbsp;&middot;&nbsp; Game 93 of 114</p>
 <div class="stats-controls">
 <div class="stats">
 <div class="stat-item"><span class="stat-label">Score:</span><span id="score">0</span>/<span id="total">0</span></div>
@@ -100,10 +100,10 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </div>
 </div>
 <script>
-const categories = [{"key": "imaging", "label": "Diagnostic Finding"}, {"key": "presentation", "label": "Presentation / Lab"}, {"key": "treatment", "label": "Treatment"}];
+const categories = [{"key": "indication", "label": "Indication"}, {"key": "mechanism", "label": "Mechanism / Note"}];
 const categoryKeys = categories.map(c => c.key);
 const categoryLabels = {}; categories.forEach(c => categoryLabels[c.key] = c.label);
-const gameData = {"Hepatic hemangioma": {"imaging": "Peripheral nodular enhancement with centripetal fill-in on delayed phases", "presentation": "Usually asymptomatic with normal LFTs", "treatment": "None if asymptomatic; resection or embolization if symptomatic"}, "Focal nodular hyperplasia": {"imaging": "Central stellate scar with homogeneous enhancement", "presentation": "Incidental finding, normal liver enzymes", "treatment": "No treatment or routine follow-up required"}, "Hepatic adenoma": {"imaging": "Arterial-phase enhancement without a central scar", "presentation": "Right upper quadrant pain, risk of spontaneous bleeding", "treatment": "Discontinue oral contraceptives and steroids; resect if symptomatic or over 5 cm"}, "Hepatocellular carcinoma": {"imaging": "CT, MRI, or ultrasound mass plus elevated serum AFP", "presentation": "Decompensated cirrhosis with ascites, encephalopathy, or jaundice", "treatment": "Resection or liver transplant; chemotherapy and radiation ineffective"}, "Cholangiocarcinoma": {"imaging": "ERCP and CT; FDG-PET for distant metastasis", "presentation": "Obstructive jaundice, hepatomegaly, palpable gallbladder", "treatment": "Surgical resection or transplant depending on extent of disease"}};
+const gameData = {"Metronidazole": {"indication": "Tissue amebicide for amebic abscess (used first)", "mechanism": "Generates toxic free radicals damaging parasite DNA"}, "Paromomycin": {"indication": "Luminal amebicide given after metronidazole", "mechanism": "Clears residual intestinal cysts, preventing relapse"}, "Triclabendazole": {"indication": "Treatment of fascioliasis (Fasciola hepatica)", "mechanism": "Inhibits tubulin; may cause biliary obstruction, long QTc"}, "Praziquantel": {"indication": "Preferred for clonorchiasis or opisthorchiasis", "mechanism": "Rapid Ca2+ influx causing parasite immobilization"}};
 
 let score = 0, totalItems = 0, draggedElement = null, allItems = {};
 

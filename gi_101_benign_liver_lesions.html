@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hepatitis B Drug Mechanisms - GIStudy Drag &amp; Drop</title>
+<title>Benign Liver Lesions - GIStudy Drag &amp; Drop</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg,#0a0f1c 0%,#0f1729 50%,#0a0f1c 100%); color:#e4e4e4; padding:20px; min-height:100vh; }
@@ -67,11 +67,11 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </head>
 <body>
 <a href="gi_index.html" class="nav-link" style="position:fixed;top:12px;left:12px;z-index:9999;background:rgba(0,0,0,.55);color:#94a3b8;border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:5px 13px;font-size:.72rem;text-decoration:none;">&#8592; Index</a>
-<a href="gi_93_hep_drug_adverse_effects.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
+<a href="gi_102_malignant_liver_tumors.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
 <div class="container">
-<h1>💊 Hepatitis B Drug Mechanisms</h1>
-<p class="subtitle">Match each hepatitis B agent to its analog class, mechanism, and clinical note</p>
-<p class="brick-tag">Brick 26: Drugs to Treat Hepatitis B and C Infections &nbsp;&middot;&nbsp; Game 92 of 111</p>
+<h1>🫀 Benign Liver Lesions</h1>
+<p class="subtitle">Match each benign hepatic lesion to its profile</p>
+<p class="brick-tag">Brick 29: Hepatic and Biliary Neoplasms &nbsp;&middot;&nbsp; Game 101 of 114</p>
 <div class="stats-controls">
 <div class="stats">
 <div class="stat-item"><span class="stat-label">Score:</span><span id="score">0</span>/<span id="total">0</span></div>
@@ -100,10 +100,10 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </div>
 </div>
 <script>
-const categories = [{"key": "analog_class", "label": "Analog / Class"}, {"key": "mechanism", "label": "Mechanism"}, {"key": "clinical_note", "label": "Clinical Note"}];
+const categories = [{"key": "demographics", "label": "Demographics"}, {"key": "association", "label": "Key Association"}, {"key": "complication", "label": "Complication Risk"}, {"key": "pathology", "label": "Distinguishing Pathology"}];
 const categoryKeys = categories.map(c => c.key);
 const categoryLabels = {}; categories.forEach(c => categoryLabels[c.key] = c.label);
-const gameData = {"Tenofovir": {"analog_class": "Acyclic analog of adenosine monophosphate", "mechanism": "Diphosphate competes with dATP; lacks 3'-OH causing obligate chain termination", "clinical_note": "Also blocks HIV replication via HBV DNA polymerase"}, "Entecavir": {"analog_class": "Guanosine nucleoside analog", "mechanism": "Competes with dGTP; blocks base priming, reverse transcription, positive strand", "clinical_note": "Effective against lamivudine-resistant HBV; edema in 16%"}, "Interferon alpha-2a": {"analog_class": "Immunomodulator, not a nucleoside analog", "mechanism": "Activates genes interfering with viral life cycle; stimulates cell-mediated immunity", "clinical_note": "Contraindicated in pregnancy; 48-week treatment course"}, "Adefovir and lamivudine": {"analog_class": "Older nucleos(t)ide analogs", "mechanism": "Inhibit HBV DNA polymerase to prevent viral replication", "clinical_note": "No longer used due to development of resistance"}};
+const gameData = {"Hepatic hemangioma": {"demographics": "Most common benign liver tumor, ages 30-50", "association": "Congenital vascular malformation, not a true neoplasm", "complication": "Rupture and hemorrhage are rare, not a major concern", "pathology": "Dilated blood-filled channels lined by endothelial cells"}, "Focal nodular hyperplasia": {"demographics": "Second most common benign mass, mostly young-to-middle-aged females", "association": "Localized vascular abnormality, not strongly hormone-dependent", "complication": "No meaningful risk of hemorrhage or malignant transformation", "pathology": "Hyperplastic hepatocytes around central fibrous scar, contains normal bile ducts"}, "Hepatic adenoma": {"demographics": "Uncommon, young women 20-44 years", "association": "Oral contraceptives, anabolic androgens, glycogen storage disease type 1a", "complication": "Spontaneous hemorrhage and malignant transformation to HCC", "pathology": "Benign epithelial tumor driven by estrogen receptors in hepatocytes"}};
 
 let score = 0, totalItems = 0, draggedElement = null, allItems = {};
 

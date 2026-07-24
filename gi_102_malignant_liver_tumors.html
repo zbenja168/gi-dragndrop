@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Complications of Chronic Pancreatitis - GIStudy Drag &amp; Drop</title>
+<title>Malignant Liver &amp; Biliary Tumors - GIStudy Drag &amp; Drop</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg,#0a0f1c 0%,#0f1729 50%,#0a0f1c 100%); color:#e4e4e4; padding:20px; min-height:100vh; }
@@ -67,11 +67,11 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </head>
 <body>
 <a href="gi_index.html" class="nav-link" style="position:fixed;top:12px;left:12px;z-index:9999;background:rgba(0,0,0,.55);color:#94a3b8;border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:5px 13px;font-size:.72rem;text-decoration:none;">&#8592; Index</a>
-<a href="gi_108_driver_mutations.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
+<a href="gi_103_hepatobiliary_dx_mgmt.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
 <div class="container">
-<h1>🩺 Complications of Chronic Pancreatitis</h1>
-<p class="subtitle">Match each complication to its cause and how it manifests</p>
-<p class="brick-tag">Brick 30: Acute and Chronic Pancreatitis &nbsp;&middot;&nbsp; Game 107 of 111</p>
+<h1>🎗️ Malignant Liver &amp; Biliary Tumors</h1>
+<p class="subtitle">Match each malignancy to its origin, risk factors, and key feature</p>
+<p class="brick-tag">Brick 29: Hepatic and Biliary Neoplasms &nbsp;&middot;&nbsp; Game 102 of 114</p>
 <div class="stats-controls">
 <div class="stats">
 <div class="stat-item"><span class="stat-label">Score:</span><span id="score">0</span>/<span id="total">0</span></div>
@@ -100,10 +100,10 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </div>
 </div>
 <script>
-const categories = [{"key": "cause", "label": "Underlying Cause"}, {"key": "manifestation", "label": "Manifestation"}];
+const categories = [{"key": "origin", "label": "Origin"}, {"key": "risk", "label": "Risk Factors"}, {"key": "feature", "label": "Key Feature"}];
 const categoryKeys = categories.map(c => c.key);
 const categoryLabels = {}; categories.forEach(c => categoryLabels[c.key] = c.label);
-const gameData = {"Exocrine insufficiency": {"cause": "Fibrosis reduces enzyme production; lipase deficiency", "manifestation": "Steatorrhea, weight loss, low fat-soluble vitamins (A, D, E, K)"}, "Endocrine insufficiency": {"cause": "Destruction of insulin beta cells and glucagon alpha cells", "manifestation": "Type 3c (pancreatogenic) diabetes mellitus"}, "Biliary strictures": {"cause": "Fibrosis around the intrapancreatic common bile duct", "manifestation": "Obstructive jaundice"}, "Pancreatic cancer": {"cause": "Chronic inflammation raises lifetime risk", "manifestation": "Pancreatic adenocarcinoma"}, "Malnutrition": {"cause": "Malabsorption, reduced oral intake, and alcohol use", "manifestation": "Common and multifactorial nutrient and weight loss"}};
+const gameData = {"Hepatocellular carcinoma": {"origin": "Most common primary liver cancer, a malignant hepatocyte tumor", "risk": "Cirrhosis from hepatitis B, hepatitis C, or alcohol (ABC)", "feature": "Elevated AFP with imaging mass; biopsy contraindicated"}, "Cholangiocarcinoma": {"origin": "Malignancy of intrahepatic, perihilar, and extrahepatic biliary tree", "risk": "Primary sclerosing cholangitis, Clonorchis sinensis, thorotrast, choledochal cysts", "feature": "Klatskin tumor at junction of right and left hepatic ducts is most common subtype"}, "Metastatic liver cancer": {"origin": "Most common cause of cancer in the liver overall, spread from another site", "risk": "Primary tumor of GI tract (colon), breast, or lung", "feature": "Usually shows multiple lesions on imaging"}, "Hepatic angiosarcoma": {"origin": "Rare primary liver malignancy of endothelial cell origin", "risk": "Exposure to arsenic and vinyl chloride", "feature": "Much less common than other primary liver malignancies"}};
 
 let score = 0, totalItems = 0, draggedElement = null, allItems = {};
 

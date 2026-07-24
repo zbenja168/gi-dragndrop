@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fasciola hepatica Life Cycle - GIStudy Drag &amp; Drop</title>
+<title>Diagnostic &amp; Pathology Clues - GIStudy Drag &amp; Drop</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg,#0a0f1c 0%,#0f1729 50%,#0a0f1c 100%); color:#e4e4e4; padding:20px; min-height:100vh; }
@@ -67,11 +67,11 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </head>
 <body>
 <a href="gi_index.html" class="nav-link" style="position:fixed;top:12px;left:12px;z-index:9999;background:rgba(0,0,0,.55);color:#94a3b8;border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:5px 13px;font-size:.72rem;text-decoration:none;">&#8592; Index</a>
-<a href="gi_90_antiparasitic_hepatic_drugs.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
+<a href="gi_114_management_options.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
 <div class="container">
-<h1>🐌 Fasciola hepatica Life Cycle</h1>
-<p class="subtitle">Match each life cycle stage to where it is and what it does</p>
-<p class="brick-tag">Brick 25: Infectious Hepatic Abscesses and Flukes &nbsp;&middot;&nbsp; Game 89 of 111</p>
+<h1>🔬 Diagnostic &amp; Pathology Clues</h1>
+<p class="subtitle">Match each clue to its description and clinical role</p>
+<p class="brick-tag">Brick 32: Pancreatic Carcinoma &nbsp;&middot;&nbsp; Game 113 of 114</p>
 <div class="stats-controls">
 <div class="stats">
 <div class="stat-item"><span class="stat-label">Score:</span><span id="score">0</span>/<span id="total">0</span></div>
@@ -100,10 +100,10 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </div>
 </div>
 <script>
-const categories = [{"key": "location", "label": "Where It Is"}, {"key": "event", "label": "Key Event"}];
+const categories = [{"key": "description", "label": "Description"}, {"key": "role", "label": "Clinical Role"}];
 const categoryKeys = categories.map(c => c.key);
 const categoryLabels = {}; categories.forEach(c => categoryLabels[c.key] = c.label);
-const gameData = {"Adult worm": {"location": "Hepatic biliary ducts of the host", "event": "Lays eggs that pass out in feces"}, "Eggs": {"location": "Passed in feces, then embryonate in water", "event": "Come into contact with water and hatch"}, "Miracidia": {"location": "Enter a freshwater snail", "event": "Hatch and penetrate the snail intermediate host"}, "Cercariae": {"location": "Released from snail onto water plants", "event": "Free-swimming, then encyst on aquatic plants"}, "Metacercariae": {"location": "On water plants, ingested by the host", "event": "Infectious stage that excysts in the duodenum"}};
+const gameData = {"CA 19-9": {"description": "Blood tumor marker for pancreatic carcinoma", "role": "Used mainly for prognosis, where lower level means better outlook"}, "Biopsy": {"description": "Sampling for characteristic histologic findings", "role": "Needed to confirm the diagnosis"}, "Double-duct sign": {"description": "Dilation of the common bile duct and pancreatic duct", "role": "An imaging finding on contrast-enhanced CT"}, "Desmoplasia": {"description": "Dense collagen secreted by proliferating fibroblasts", "role": "Malignant glands arranged haphazardly within this stroma"}, "Conjugated hyperbilirubinemia": {"description": "Elevated conjugated bilirubin", "role": "Reflects the obstructive pattern of the jaundice"}};
 
 let score = 0, totalItems = 0, draggedElement = null, allItems = {};
 

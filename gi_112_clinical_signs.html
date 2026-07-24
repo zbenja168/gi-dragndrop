@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Diagnostic Workup - GIStudy Drag &amp; Drop</title>
+<title>Clinical Signs &amp; Presentation - GIStudy Drag &amp; Drop</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg,#0a0f1c 0%,#0f1729 50%,#0a0f1c 100%); color:#e4e4e4; padding:20px; min-height:100vh; }
@@ -67,11 +67,11 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </head>
 <body>
 <a href="gi_index.html" class="nav-link" style="position:fixed;top:12px;left:12px;z-index:9999;background:rgba(0,0,0,.55);color:#94a3b8;border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:5px 13px;font-size:.72rem;text-decoration:none;">&#8592; Index</a>
-<a href="gi_104_acute_causes_smashed.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
+<a href="gi_113_diagnosis_pathology.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
 <div class="container">
-<h1>🔬 Diagnostic Workup</h1>
-<p class="subtitle">Match each test to its role and its key finding in peritonitis</p>
-<p class="brick-tag">Brick 29: Peritonitis &nbsp;&middot;&nbsp; Game 103 of 111</p>
+<h1>🩺 Clinical Signs &amp; Presentation</h1>
+<p class="subtitle">Match each finding to its manifestation and key detail</p>
+<p class="brick-tag">Brick 32: Pancreatic Carcinoma &nbsp;&middot;&nbsp; Game 112 of 114</p>
 <div class="stats-controls">
 <div class="stats">
 <div class="stat-item"><span class="stat-label">Score:</span><span id="score">0</span>/<span id="total">0</span></div>
@@ -100,10 +100,10 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </div>
 </div>
 <script>
-const categories = [{"key": "role", "label": "Role"}, {"key": "finding", "label": "Key Finding"}];
+const categories = [{"key": "manifestation", "label": "Manifestation"}, {"key": "detail", "label": "Key Detail"}];
 const categoryKeys = categories.map(c => c.key);
 const categoryLabels = {}; categories.forEach(c => categoryLabels[c.key] = c.label);
-const gameData = {"Upright chest X-ray": {"role": "Detects free intraperitoneal air under the diaphragm", "finding": "About 85% sensitive for a perforated duodenal ulcer"}, "CT abdomen": {"role": "Most useful imaging in acute abdominal pain", "finding": "Shows free air, fluid collections, bowel wall thickening, abscesses"}, "Diagnostic paracentesis": {"role": "Samples ascitic fluid in suspected SBP", "finding": "PMN count of 250 cells/mm3 or more is diagnostic"}, "Complete blood count": {"role": "Reflects acute inflammatory or infectious response", "finding": "Leukocytosis with left shift and increased band forms"}, "Amylase and lipase": {"role": "Directed at identifying pancreatitis as a cause", "finding": "Elevated when pancreatitis underlies the peritonitis"}, "Liver function tests": {"role": "Directed at identifying biliary disease as a cause", "finding": "Abnormal values point to a biliary source"}};
+const gameData = {"Courvoisier sign": {"manifestation": "Palpably enlarged, nontender gallbladder", "detail": "Accompanied by mild painless jaundice"}, "Trousseau sign": {"manifestation": "Migratory thrombophlebitis", "detail": "From tumor procoagulants such as tissue factor and mucins"}, "Jaundice": {"manifestation": "Yellowish skin from common bile duct obstruction", "detail": "Painless in 50% of patients"}, "Epigastric pain": {"manifestation": "Insidious gnawing visceral pain", "detail": "Located in the epigastric region"}, "New-onset diabetes": {"manifestation": "Sudden onset of diabetes mellitus", "detail": "One of the less common presenting signs"}};
 
 let score = 0, totalItems = 0, draggedElement = null, allItems = {};
 

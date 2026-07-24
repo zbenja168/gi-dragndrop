@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Causes of Acute Pancreatitis (I GET SMASHED) - GIStudy Drag &amp; Drop</title>
+<title>Hepatitis Drug Adverse Effects and Safety - GIStudy Drag &amp; Drop</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg,#0a0f1c 0%,#0f1729 50%,#0a0f1c 100%); color:#e4e4e4; padding:20px; min-height:100vh; }
@@ -67,11 +67,11 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </head>
 <body>
 <a href="gi_index.html" class="nav-link" style="position:fixed;top:12px;left:12px;z-index:9999;background:rgba(0,0,0,.55);color:#94a3b8;border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:5px 13px;font-size:.72rem;text-decoration:none;">&#8592; Index</a>
-<a href="gi_105_acute_complications.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
+<a href="gi_97_biliary_terminology.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
 <div class="container">
-<h1>💥 Causes of Acute Pancreatitis (I GET SMASHED)</h1>
-<p class="subtitle">Match each acute pancreatitis cause to its mnemonic clue and mechanism</p>
-<p class="brick-tag">Brick 30: Acute and Chronic Pancreatitis &nbsp;&middot;&nbsp; Game 104 of 111</p>
+<h1>⚠️ Hepatitis Drug Adverse Effects and Safety</h1>
+<p class="subtitle">Match each agent to its class, signature adverse effect, and safety note</p>
+<p class="brick-tag">Brick 27: Drugs to Treat Hepatitis B and C Infections &nbsp;&middot;&nbsp; Game 96 of 114</p>
 <div class="stats-controls">
 <div class="stats">
 <div class="stat-item"><span class="stat-label">Score:</span><span id="score">0</span>/<span id="total">0</span></div>
@@ -100,10 +100,10 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </div>
 </div>
 <script>
-const categories = [{"key": "mnemonic", "label": "Mnemonic Clue (I GET SMASHED)"}, {"key": "mechanism", "label": "Mechanism"}];
+const categories = [{"key": "drug_class", "label": "Class"}, {"key": "adverse_effect", "label": "Signature Adverse Effect"}, {"key": "safety_note", "label": "Safety Note"}];
 const categoryKeys = categories.map(c => c.key);
 const categoryLabels = {}; categories.forEach(c => categoryLabels[c.key] = c.label);
-const gameData = {"Gallstones": {"mnemonic": "G — most common cause, 40–70% of cases", "mechanism": "Impact at ampulla of Vater, raising intraductal pressure"}, "Ethanol": {"mnemonic": "E — 25–35% of cases", "mechanism": "Directly toxic to acinar cells"}, "Metabolic": {"mnemonic": "M — hypertriglyceridemia >1,000 mg/dL or hypercalcemia", "mechanism": "Free fatty acids toxic to acinar cells and endothelium"}, "Scorpion stings": {"mnemonic": "S — Trinidad scorpion venom", "mechanism": "ACh release drives enzyme hypersecretion and Oddi contraction"}, "ERCP": {"mnemonic": "E — endoscopic procedure at the ampulla of Vater", "mechanism": "Microedema and transient pancreatic duct obstruction"}, "Drugs": {"mnemonic": "D — azathioprine, valproic acid, 6-MP, thiazides", "mechanism": "Thiazides raise serum calcium and worsen hypertriglyceridemia"}};
+const gameData = {"Entecavir": {"drug_class": "HBV guanosine nucleoside analog", "adverse_effect": "Edema (16%), headache, and fatigue", "safety_note": "Lactic acidosis with antiretrovirals; avoid renal-toxic drugs"}, "Interferon alpha-2a": {"drug_class": "Immunomodulator used as last resort", "adverse_effect": "Myalgias, arthralgia, insomnia, neutropenia, mood changes", "safety_note": "Should not be administered to pregnant patients"}, "Ribavirin": {"drug_class": "Guanosine analog, HCV adjunct", "adverse_effect": "Dose-dependent hemolytic anemia", "safety_note": "Teratogenic; contraindicated in anemia, kidney disease, COPD"}, "NS5B Polymerase Inhibitor (Sofosbuvir)": {"drug_class": "NS5B RNA polymerase inhibitor", "adverse_effect": "Anemia, fatigue, headache, and nausea", "safety_note": "P-gp substrate; avoid P-gp inducers"}, "NS3/4A Protease Inhibitor (Grazoprevir)": {"drug_class": "NS3/4A serine protease inhibitor", "adverse_effect": "Fatigue, headache, and nausea", "safety_note": "CYP3A4/P-gp inhibitor; interacts with HIV medications"}};
 
 let score = 0, totalItems = 0, draggedElement = null, allItems = {};
 

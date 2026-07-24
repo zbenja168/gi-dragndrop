@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Causative Organisms - GIStudy Drag &amp; Drop</title>
+<title>Hepatitis C Drug Classes - GIStudy Drag &amp; Drop</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg,#0a0f1c 0%,#0f1729 50%,#0a0f1c 100%); color:#e4e4e4; padding:20px; min-height:100vh; }
@@ -67,11 +67,11 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </head>
 <body>
 <a href="gi_index.html" class="nav-link" style="position:fixed;top:12px;left:12px;z-index:9999;background:rgba(0,0,0,.55);color:#94a3b8;border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:5px 13px;font-size:.72rem;text-decoration:none;">&#8592; Index</a>
-<a href="gi_103_peritonitis_diagnostics.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
+<a href="gi_95_hbv_drugs_mechanism.html" class="nav-link" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(0,0,0,.72);color:#e2e8f0;border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:8px 18px;font-size:.85rem;font-weight:600;text-decoration:none;">Next &#8594;</a>
 <div class="container">
-<h1>🦠 Causative Organisms</h1>
-<p class="subtitle">Match each pathogen to its class, peritonitis association, and key detail</p>
-<p class="brick-tag">Brick 29: Peritonitis &nbsp;&middot;&nbsp; Game 102 of 111</p>
+<h1>🧬 Hepatitis C Drug Classes</h1>
+<p class="subtitle">Match each hepatitis C agent to its target, examples, and clinical pearl</p>
+<p class="brick-tag">Brick 27: Drugs to Treat Hepatitis B and C Infections &nbsp;&middot;&nbsp; Game 94 of 114</p>
 <div class="stats-controls">
 <div class="stats">
 <div class="stat-item"><span class="stat-label">Score:</span><span id="score">0</span>/<span id="total">0</span></div>
@@ -100,10 +100,10 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </div>
 </div>
 <script>
-const categories = [{"key": "class", "label": "Class"}, {"key": "association", "label": "Peritonitis Association"}, {"key": "detail", "label": "Key Detail"}];
+const categories = [{"key": "target_mechanism", "label": "Target / Mechanism"}, {"key": "example_drug", "label": "Example Drugs"}, {"key": "clinical_pearl", "label": "Clinical Pearl"}];
 const categoryKeys = categories.map(c => c.key);
 const categoryLabels = {}; categories.forEach(c => categoryLabels[c.key] = c.label);
-const gameData = {"Escherichia coli": {"class": "Gram-negative enteric rod", "association": "Most common cause of primary peritonitis (SBP)", "detail": "Reaches peritoneum via bacterial translocation across intestinal wall"}, "Klebsiella pneumoniae": {"class": "Gram-negative rod", "association": "Common cause of SBP alongside E. coli", "detail": "Covered by 3rd-generation cephalosporins in SBP"}, "Staphylococcus epidermidis": {"class": "Gram-positive skin flora", "association": "Common cause of peritoneal dialysis-associated peritonitis", "detail": "Enters through or around the dialysis catheter"}, "Bacteroides fragilis": {"class": "Anaerobe", "association": "Part of polymicrobial secondary peritonitis", "detail": "Reflects flora of the disrupted GI organ"}, "Enterococcus": {"class": "Gram-positive coccus", "association": "Component of secondary peritonitis flora", "detail": "Must be covered by broad-spectrum regimen (e.g. piperacillin/tazobactam)"}, "Candida albicans": {"class": "Fungus (yeast)", "association": "Most common fungal cause of dialysis-associated peritonitis", "detail": "Treated with broad-spectrum antifungal medications"}};
+const gameData = {"NS3/4A Protease Inhibitors": {"target_mechanism": "Inhibit NS3/4A serine protease; post-translational processing of HCV proteins", "example_drug": "Grazoprevir, voxilaprevir, glecaprevir (suffix -previr)", "clinical_pearl": "CYP3A4 and P-gp inhibitors; significant drug interactions"}, "NS5B RNA Polymerase Inhibitors": {"target_mechanism": "Inhibit NS5B RNA-dependent RNA polymerase; cause RNA chain termination", "example_drug": "Sofosbuvir, dasabuvir (suffix -buvir)", "clinical_pearl": "P-gp substrate; avoid coadministration with P-gp inducers"}, "NS5A Inhibitors": {"target_mechanism": "Inhibit NS5A protein for viral replication and assembly (mechanism unclear)", "example_drug": "Ledipasvir, elbasvir, pibrentasvir (suffix -svir)", "clinical_pearl": "Inhibit P-gp and CYP enzymes (CYP1A2, CYP3A4)"}, "Ribavirin": {"target_mechanism": "Guanosine analog; disrupts viral RNA synthesis by lowering GTP levels", "example_drug": "Ribavirin", "clinical_pearl": "Adjunct agent; teratogenic and causes hemolytic anemia"}, "Interferon alpha-2a": {"target_mechanism": "Activates antiviral genes; stimulates immune-mediated clearance of cells", "example_drug": "Pegylated interferon alpha-2a", "clinical_pearl": "Last resort for viral resistance or lack of DAA access"}};
 
 let score = 0, totalItems = 0, draggedElement = null, allItems = {};
 
