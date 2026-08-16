@@ -101,10 +101,10 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </div>
 </div>
 <script>
-const categories = [{"key": "wilson", "label": "Wilson Disease"}, {"key": "hemochromatosis", "label": "Hemochromatosis"}, {"key": "a1at", "label": "Alpha-1 Antitrypsin Deficiency"}];
+const categories = [{"key": "genetic_defect", "label": "Genetic defect"}, {"key": "accumulated_substance", "label": "Accumulated substance"}, {"key": "diagnostic_findings", "label": "Diagnostic findings"}, {"key": "first_line_treatment", "label": "First-line treatment"}];
 const categoryKeys = categories.map(c => c.key);
 const categoryLabels = {}; categories.forEach(c => categoryLabels[c.key] = c.label);
-const gameData = {"Genetic defect": {"wilson": "ATP7B mutation impairing copper excretion", "hemochromatosis": "HFE gene mutation on chromosome 6", "a1at": "Gene mutation causing alpha-1 antitrypsin to misfold"}, "Accumulated substance": {"wilson": "Copper", "hemochromatosis": "Iron", "a1at": "Misfolded alpha-1 antitrypsin protein"}, "Diagnostic findings": {"wilson": "Low ceruloplasmin, high liver and urine copper, Kayser-Fleischer rings", "hemochromatosis": "High transferrin saturation, ferritin, serum iron; low TIBC", "a1at": "Low serum A1AT and pink PAS-positive globules on biopsy"}, "First-line treatment": {"wilson": "Copper chelation with D-penicillamine, trientine, or zinc", "hemochromatosis": "Phlebotomy to remove excess iron via RBCs", "a1at": "Liver transplant, curative for hepatic disease"}};
+const gameData = {"Wilson Disease": {"genetic_defect": "ATP7B mutation impairing copper excretion", "accumulated_substance": "Copper", "diagnostic_findings": "Low ceruloplasmin, high liver and urine copper, Kayser-Fleischer rings", "first_line_treatment": "Copper chelation with D-penicillamine, trientine, or zinc"}, "Hemochromatosis": {"genetic_defect": "HFE gene mutation on chromosome 6", "accumulated_substance": "Iron", "diagnostic_findings": "High transferrin saturation, ferritin, serum iron; low TIBC", "first_line_treatment": "Phlebotomy to remove excess iron via RBCs"}, "Alpha-1 Antitrypsin Deficiency": {"genetic_defect": "Gene mutation causing alpha-1 antitrypsin to misfold", "accumulated_substance": "Misfolded alpha-1 antitrypsin protein", "diagnostic_findings": "Low serum A1AT and pink PAS-positive globules on biopsy", "first_line_treatment": "Liver transplant, curative for hepatic disease"}};
 
 let score = 0, totalItems = 0, draggedElement = null, allItems = {};
 

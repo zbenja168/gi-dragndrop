@@ -101,10 +101,10 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </div>
 </div>
 <script>
-const categories = [{"key": "ias", "label": "Internal Anal Sphincter (IAS)"}, {"key": "eas", "label": "External Anal Sphincter (EAS)"}];
+const categories = [{"key": "muscle_type", "label": "Muscle type"}, {"key": "control", "label": "Control"}, {"key": "innervation", "label": "Innervation"}, {"key": "resting_tone", "label": "Resting tone"}, {"key": "key_reflex_or_action", "label": "Key reflex or action"}, {"key": "incontinence_pattern", "label": "Incontinence pattern"}, {"key": "manometry_measure", "label": "Manometry measure"}];
 const categoryKeys = categories.map(c => c.key);
 const categoryLabels = {}; categories.forEach(c => categoryLabels[c.key] = c.label);
-const gameData = {"Muscle type": {"ias": "Smooth muscle", "eas": "Skeletal (striated) muscle"}, "Control": {"ias": "Involuntary", "eas": "Voluntary"}, "Innervation": {"ias": "Autonomic: hypogastric L1–L2, pelvic S2–S4", "eas": "Somatic: pudendal nerve (S2–S4)"}, "Resting tone": {"ias": "High — 70–85% of resting pressure", "eas": "Lower; rises with voluntary effort"}, "Key reflex or action": {"ias": "Rectoanal inhibitory reflex (RAIR)", "eas": "Voluntary squeeze to defer defecation"}, "Incontinence pattern": {"ias": "Passive leakage of gas or liquid stool", "eas": "Urge incontinence — cannot defer"}, "Manometry measure": {"ias": "Resting anal canal pressure", "eas": "Squeeze pressure"}};
+const gameData = {"Internal Anal Sphincter (IAS)": {"muscle_type": "Smooth muscle", "control": "Involuntary", "innervation": "Autonomic: hypogastric L1–L2, pelvic S2–S4", "resting_tone": "High — 70–85% of resting pressure", "key_reflex_or_action": "Rectoanal inhibitory reflex (RAIR)", "incontinence_pattern": "Passive leakage of gas or liquid stool", "manometry_measure": "Resting anal canal pressure"}, "External Anal Sphincter (EAS)": {"muscle_type": "Skeletal (striated) muscle", "control": "Voluntary", "innervation": "Somatic: pudendal nerve (S2–S4)", "resting_tone": "Lower; rises with voluntary effort", "key_reflex_or_action": "Voluntary squeeze to defer defecation", "incontinence_pattern": "Urge incontinence — cannot defer", "manometry_measure": "Squeeze pressure"}};
 
 let score = 0, totalItems = 0, draggedElement = null, allItems = {};
 

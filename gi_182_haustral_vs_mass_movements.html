@@ -101,10 +101,10 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </div>
 </div>
 <script>
-const categories = [{"key": "haustral", "label": "Haustral Contractions"}, {"key": "mass", "label": "Mass Movements"}];
+const categories = [{"key": "frequency", "label": "Frequency"}, {"key": "extent_per_contraction", "label": "Extent per contraction"}, {"key": "contraction_pattern", "label": "Contraction pattern"}, {"key": "primary_function", "label": "Primary function"}, {"key": "what_drives_it", "label": "What drives it"}, {"key": "clinical_correlate", "label": "Clinical correlate"}];
 const categoryKeys = categories.map(c => c.key);
 const categoryLabels = {}; categories.forEach(c => categoryLabels[c.key] = c.label);
-const gameData = {"Frequency": {"haustral": "Ongoing, localized churning", "mass": "1–3 times per day"}, "Extent per contraction": {"haustral": "One haustral sacculation at a time", "mass": "One-third to one-half of the colon"}, "Contraction pattern": {"haustral": "Circular muscle mixes contents locally", "mass": "Long segment contracts, relaxes ahead"}, "Primary function": {"haustral": "Mixing and water/electrolyte extraction", "mass": "Bulk propulsion toward the rectum"}, "What drives it": {"haustral": "Tonic tension of the taeniae coli", "mass": "Gastric or duodenal distension after a meal"}, "Clinical correlate": {"haustral": "Haustra seen on imaging: normal colon", "mass": "Reduced in slow-transit constipation"}};
+const gameData = {"Haustral Contractions": {"frequency": "Ongoing, localized churning", "extent_per_contraction": "One haustral sacculation at a time", "contraction_pattern": "Circular muscle mixes contents locally", "primary_function": "Mixing and water/electrolyte extraction", "what_drives_it": "Tonic tension of the taeniae coli", "clinical_correlate": "Haustra seen on imaging: normal colon"}, "Mass Movements": {"frequency": "1–3 times per day", "extent_per_contraction": "One-third to one-half of the colon", "contraction_pattern": "Long segment contracts, relaxes ahead", "primary_function": "Bulk propulsion toward the rectum", "what_drives_it": "Gastric or duodenal distension after a meal", "clinical_correlate": "Reduced in slow-transit constipation"}};
 
 let score = 0, totalItems = 0, draggedElement = null, allItems = {};
 

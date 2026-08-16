@@ -101,10 +101,10 @@ h1 { text-align:center; color:#38bdf8; margin-bottom:10px; font-size:2.2em; text
 </div>
 </div>
 <script>
-const categories = [{"key": "crohn", "label": "Crohn Disease"}, {"key": "uc", "label": "Ulcerative Colitis"}];
+const categories = [{"key": "bowel_region", "label": "Bowel region"}, {"key": "distribution", "label": "Distribution"}, {"key": "depth_of_inflammation", "label": "Depth of inflammation"}, {"key": "granulomas", "label": "Granulomas"}, {"key": "hallmark_complication", "label": "Hallmark complication"}, {"key": "serum_antibody", "label": "Serum antibody"}];
 const categoryKeys = categories.map(c => c.key);
 const categoryLabels = {}; categories.forEach(c => categoryLabels[c.key] = c.label);
-const gameData = {"Bowel region": {"crohn": "Terminal ileum and colon (mouth to anus)", "uc": "Colon only"}, "Distribution": {"crohn": "Skip lesions (patchy)", "uc": "Continuous, beginning in rectum"}, "Depth of inflammation": {"crohn": "Transmural (full wall thickness)", "uc": "Mucosa and submucosa only"}, "Granulomas": {"crohn": "Present (noncaseating)", "uc": "Absent"}, "Hallmark complication": {"crohn": "Fistulas and strictures", "uc": "Toxic megacolon"}, "Serum antibody": {"crohn": "ASCA positive", "uc": "p-ANCA positive"}};
+const gameData = {"Crohn Disease": {"bowel_region": "Terminal ileum and colon (mouth to anus)", "distribution": "Skip lesions (patchy)", "depth_of_inflammation": "Transmural (full wall thickness)", "granulomas": "Present (noncaseating)", "hallmark_complication": "Fistulas and strictures", "serum_antibody": "ASCA positive"}, "Ulcerative Colitis": {"bowel_region": "Colon only", "distribution": "Continuous, beginning in rectum", "depth_of_inflammation": "Mucosa and submucosa only", "granulomas": "Absent", "hallmark_complication": "Toxic megacolon", "serum_antibody": "p-ANCA positive"}};
 
 let score = 0, totalItems = 0, draggedElement = null, allItems = {};
 
